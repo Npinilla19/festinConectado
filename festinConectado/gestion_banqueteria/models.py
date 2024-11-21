@@ -35,7 +35,7 @@ class Banqueteria(models.Model):
     disponibilidad = models.CharField(max_length=200)
 
     def __str__(self):
-    return self.nombre_servicio
+        return self.nombre_servicio
  
 class Cotizacion(models.Model):
     cliente = models.ForeignKey(Usuario, on_delete=models.CASCADE)
