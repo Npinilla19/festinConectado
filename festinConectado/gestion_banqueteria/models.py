@@ -34,7 +34,7 @@ class Banqueteria(models.Model):
     precio_estimado = models.FloatField()
     disponibilidad = models.CharField(max_length=200)
 
-def __str__(self):
+    def __str__(self):
     return self.nombre_servicio
  
 class Cotizacion(models.Model):
