@@ -55,7 +55,7 @@ ROOT_URLCONF = 'festinConectado.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['gestion_banqueteria/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
