@@ -2,6 +2,19 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm 
 from django.contrib import messages
 
+
+def inicio(request):
+  return render(request, 'inicio.html', {})
+
+def acerca(request):
+  return render(request, 'acerca.html', {})
+
+def empresas(request):
+  return render(request, 'empresas.html', {})
+
+def eventos(request):
+  return render(request, 'eventos.html', {})
+
 def register(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)

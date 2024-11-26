@@ -17,11 +17,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views as auth_views
-from gestion_banqueteria import views
+from gestion_banqueteria.views import inicio, acerca, empresas, eventos 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', inicio, name='inicio'),
+    path('acerca/', acerca, name='acerca'),
+    path('empresas/', empresas, name='empresas'),
+    path('eventos/', eventos, name='eventos'),
     path('login/', auth_views.LoginView.as_view(), name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
-    path('register/', views.register, name='login')
+   
 ]

@@ -1,0 +1,137 @@
+{% extends 'base.html' %} {% block content %}
+
+<div id="myCarousel" class=" container carousel slide mb-6" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      {% load static %}
+      <img src="{% static 'img/image1.jpg' %}" class="d-block w-100"
+        alt="..."
+        class="img-fluid">
+      <div class="container">
+        <div class="carousel-caption text-start">
+          <h1>Example headline.</h1>
+          <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
+          <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      {% load static %}
+      <img src="{% static 'img/imagen2.jpg' %}" class="d-block w-100"
+        alt="..."
+        class="img-fluid">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Another example headline.</h1>
+          <p>Some representative placeholder content for the second slide of the carousel.</p>
+          <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      {% load static %}
+      <img src="{% static 'img/imagen3.jpg' %}" class="d-block w-100"
+        alt="..."
+        class="img-fluid">
+      <div class="container">
+        <div class="carousel-caption text-end">
+          <h1>One more for good measure.</h1>
+          <p>Some representative placeholder content for the third slide of this carousel.</p>
+          <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+<div class="container pt-5">
+  <h2 class="text-center fw-bold pb-5">Nuesto equipo</h2>
+  <div class="row text-center">
+    <div class="col-lg-4 d-flex flex-column align-items-center">
+    {% load static %}
+    <img class="rounded-circle " width="200px" src="{% static 'img/persona1.jpg' %}" alt="..." class="img-fluid">
+    
+    <h3 class="fw-normal mt-3">María</h3>
+    <p>Soy una profesional apasionada por el diseño de experiencias y la innovación. Con su visión estratégica, ha sido clave en conectar servicios de banquetería con clientes, transformando la organización de eventos en algo sencillo y memorable.</p>
+    </div>
+    <div class="col-lg-4 d-flex flex-column align-items-center">
+    {% load static %}
+    <img class="rounded-circle " width="200px" src="{% static 'img/persona2.jpg' %}" alt="..." class="img-fluid">
+    <h3 class="fw-normal mt-3">Pedro</h3>
+    <p>Tengo 35 años y soy un apasionado por la tecnología y la gastronomía, busca simplificar la organización de eventos a través de soluciones innovadoras y accesibles.</p>
+  </div>
+    <div class="col-lg-4 d-flex flex-column align-items-center">
+    {% load static %}
+    <img class="rounded-circle " width="200px" src="{% static 'img/persona1.jpg' %}" alt="..." class="img-fluid">
+    <h3 class="fw-normal mt-2">Isabel</h3>
+    <p> Soy una emprendedora comprometida con la innovación y la excelencia en el servicio. Su experiencia y visión han sido fundamentales para conectar servicios de banquetería con clientes, haciendo que planificar eventos sea más fácil y eficiente.</p>
+  </div>
+</div>
+
+  <hr class="border border-dark">
+
+    <div class="row pt-3">
+      <h2 class="text-center fw-bold pb-5">Nuestos Clientes</h2>
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1 mt-5">"Organizar el banquete para el bautizo fue facilísimo con la app. Todo salió perfecto y los invitados quedaron encantados." <span class="text-body-secondary">¡100% recomendada!</span></h2>
+        <p class="lead">Banqueteria realizada por "Sabores & Momentos", Providencia, Santiago, Octubre 2023</p>
+      </div>
+      <div class="col-md-5">
+        {% load static %}
+        <img src="{% static 'img/bautizo.jpg' %}" class="d-block w-100"
+          alt="..."
+          class="img-fluid">
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1 mt-5">"Gracias a la app, nuestro matrimonio fue un sueño hecho realidad. El servicio de banquetería fue impecable, con deliciosa comida y atención de primer nivel." <span class="text-body-secondary"> ¡Una experiencia inolvidable!"</span></h2>
+        <p class="lead">Banqueteria realizada por "Banquetes del Valle", Temuco, Araucania, Septiembre 2024</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        {% load static %}
+        <img src="{% static 'img/matrimonio.jpeg' %}" class="d-block w-100"
+          alt="..."
+          class="img-fluid">
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row pb-3">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1 mt-5">"El banquete de licenciatura fue increíble. Todo estuvo delicioso y bien organizado, creando una atmósfera perfecta para celebrar este logro." ¡Un evento memorable! <span class="text-body-secondary"> ¡Un evento memorable! <</span></h2>
+        <p class="lead">Banqueteria realizada por "Delicias & Eventos", Puerto Montt, Los Lagos, Abril 2024.</p>
+      </div>
+      <div class="col-md-5">
+        {% load static %}
+        <img src="{% static 'img/licenciatura.jpg' %}" class="d-block w-100"
+          alt="..."
+          class="img-fluid">
+      </div>
+    </div>
+
+    <hr class="border border-dark">
+
+    </div>
+
+   
+  {% endblock %}

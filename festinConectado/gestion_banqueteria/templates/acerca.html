@@ -1,0 +1,40 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container ">
+    <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+    <div class="container-fluid py-5">
+      <h1 class="display-5 fw-bold">¿Quienes somos?</h1>
+      <p class="col-md-8 fs-4">Este proyecto nació de la idea de simplificar la organización de eventos y facilitar el acceso a servicios de banquetería de calidad. Creada por un equipo apasionado por la tecnología y la gastronomía, nuestra plataforma conecta a clientes con proveedores expertos en banquetes para todo tipo de celebraciones. Con solo unos clics, los usuarios pueden elegir menús, personalizar su evento y coordinar detalles sin complicaciones. 
+<br>
+<br>
+    Nuestra Vision es transformar la manera en que las personas organizan sus eventos, brindando experiencias gastronómicas únicas y accesibles para todos. Queremos ser la referencia líder en la industria de la banquetería, haciendo cada celebración más memorable y sin estrés para nuestros clientes.</p>
+    </div>
+  </div>
+
+  <div class="row align-items-md-stretch">
+    <div class="col-md-6">
+      <div class="h-100 p-5 text-bg-dark rounded-3">
+        <h2>¿Donde nos encontramos?</h2><br>
+        <h3>Festin conectado </h3>
+        <p>Av. Las Condes 1234, Piso 5<br>
+          Providencia, Santiago, Chile <br><br>
+
+          1. Desde Metro Tobalaba (Línea 1), sal por la Salida 1 y camina 2 cuadras hacia el norte.<br>
+          2. Gira a la derecha en Av. Las Condes y camina 50 metros.<br>
+          3. La entrada está a la izquierda en el número 1234.<br>
+          4. Usa el ascensor al Piso 5.<br><br>
+          ¡Te esperamos!
+        
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="h-100 p-5 bg-body-tertiary border rounded-3">
+        <h2 class="mb-2">Ubicanos</h2>
+        {% load static %}
+        <img src="{% static 'img/mapa.png' %}" class="d-block w-100"
+          alt="..."
+          class="img-fluid">
+      </div>
+    </div>
+  </div>
+  {% endblock %}
