@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Usuario(models.Model):
     TIPO_USUARIO = (
@@ -12,6 +13,7 @@ class Usuario(models.Model):
     telefono = models.CharField(max_length=20)
     correo = models.EmailField(unique=True)
     tipo_usuario = models.CharField(max_length=10, choices=TIPO_USUARIO)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return f'{self.nombre} {self.apellido}'
@@ -40,7 +42,7 @@ class Banqueteria(models.Model):
 class Cotizacion(models.Model):
     cliente = models.ForeignKey(Usuario, on_delete=models.CASCADE)
     banqueteria = models.ForeignKey(Banqueteria, on_delete=models.CASCADE)
-    fecha_evento = models.DateTimeField(auto_now_add=True)
+    fecha_evento = models.DateTimeField()
     mensaje = models.TextField()
 
     def __str__(self):

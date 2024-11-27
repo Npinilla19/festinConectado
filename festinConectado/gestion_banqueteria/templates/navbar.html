@@ -20,7 +20,7 @@
       <ul class="navbar-nav ms-auto text-small">
         <li class="nav-item">
           <a href="/" class="nav-link text-white">
-           Inicio
+            Inicio
           </a>
         </li>
         <li class="nav-item">
@@ -38,9 +38,19 @@
              Eventos
           </a>
         </li>
-        <li class="nav-item">
-          <a href="/contacto/" class="btn btn-secondary">Cotizacion</a>
-        </li>
+
+        {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a href="{% url 'logout' %}" class="btn btn-secondary">Cerrar sesión</a>
+          </li>
+        {% else %}
+          <li class="nav-item">
+            <a href="{% url 'login' %}" class="btn btn-secondary">Iniciar sesión</a>
+          </li>
+          <li class="nav-item">
+            <a href="{% url 'registro' %}" class="btn btn-secondary">Registro</a>
+          </li>
+        {% endif %}
       </ul>
     </div>
   </div>
