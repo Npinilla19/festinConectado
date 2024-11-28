@@ -7,13 +7,15 @@ class Usuario(models.Model):
         ('proveedor', 'Proveedor'),
     )
 
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    nombre_usuario = models.CharField(max_length=50)
     nombre = models.CharField(max_length=100)
     apellido = models.CharField(max_length=100)
     direccion = models.CharField(max_length=250)
     telefono = models.CharField(max_length=20)
     correo = models.EmailField(unique=True)
     tipo_usuario = models.CharField(max_length=10, choices=TIPO_USUARIO)
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    
 
     def __str__(self):
         return f'{self.nombre} {self.apellido}'

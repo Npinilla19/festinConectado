@@ -1,8 +1,48 @@
 {% extends 'base.html' %} {% block content %}
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}  
-    <button type="submit">suscribete</button>
-</form>
+<div class="container py-5">
+    <form method="POST">
+        {% csrf_token %}
+
+        <div class="mb-3">
+            <label>Nombre de Usuario : </label>
+            {{ form.nombre_usuario }}
+        </div>
+        <div class="mb-3">
+            <label>Contraseña : </label>
+            {{ form.password }}
+            <small class="form-text text-muted">{{ form.password.help_text }}</small>
+        </div>
+        <div class="mb-3">
+            <label>Correo : </label>
+            {{ form.correo }}
+        </div>
+    
+        <div class="mb-3">
+            <label>Nombre :</label>
+            {{ form.nombre }}
+        </div>
+        <div class="mb-3">
+            <label>Apellido:</label>
+            {{ form.apellido }}
+        </div>
+        <div class="mb-3">
+            <label>Direccion : </label>
+            {{ form.direccion }}
+        </div>
+        <div class="mb-3">
+            <label>Telefono : </label>
+            {{ form.telefono }}
+        </div>
+        <div class="mb-3">
+            <label>Tipo de Usuario : </label>
+            {{ form.tipo_usuario }}
+        </div>
+    
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Suscribir</button>
+        </div>
+    </form>
+    
+</div>
 
 {% endblock %}

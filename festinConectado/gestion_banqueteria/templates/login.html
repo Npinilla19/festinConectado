@@ -1,5 +1,5 @@
 {% extends "base.html" %} {% block content %}
-
+<div class="container py-5">
 <h2>Inicia sesión</h2>
 <form method="POST">
     {% csrf_token %}
@@ -7,5 +7,5 @@
     <button type="submit">Iniciar sesión</button>
 </form>
 <p>¿No tienes una cuenta? <a href="{% url 'registro' %}">Regístrate aquí</a></p>
-
+</div>
 {% endblock %}
