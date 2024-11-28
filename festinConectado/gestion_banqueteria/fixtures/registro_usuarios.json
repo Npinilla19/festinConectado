@@ -1,0 +1,56 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "username": "cliente01",
+            "password": "pbkdf2_sha256$240000$MIdeakxHokVkSAIj80QH52$bgAh79gdhglsljfslf3i3j3w3hww3",  
+            "email": "cliente01@dominio.com",
+            "first_name": "Juan",
+            "last_name": "Pérez",
+            "is_active": true
+        }
+    },
+    {
+        "model": "gestion_banqueteria.usuario",
+        "pk": 1,
+        "fields": {
+            "nombre_usuario": "cliente01",
+            "correo": "cliente01@dominio.com",
+            "nombre": "Juan",
+            "apellido": "Pérez",
+            "direccion": "Calle Falsa 123",
+            "telefono": "123456789",
+            "tipo_usuario": "clientes",
+            "user": 1 
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "username": "proveedor01",
+            "password": "pbkdf2_sha256$240000$MIdeakxHokVkSAIj80QH52$bgAh79gdhglsljfslf3i3j3w3hww3",
+            "email": "proveedor01@dominio.com",
+            "first_name": "María",
+            "last_name": "González",
+            "is_active": true
+        }
+    },
+    {
+        "model": "gestion_banqueteria.usuario",
+        "pk": 2,
+        "fields": {
+            "nombre_usuario": "proveedor01",
+            "correo": "proveedor01@dominio.com",
+            "nombre": "María",
+            "apellido": "González",
+            "direccion": "Avenida Siempre Viva 123",
+            "telefono": "987654321",
+            "tipo_usuario": "proveedor",
+            "user": 2
+        }
+    }
+]
+
+  

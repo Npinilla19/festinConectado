@@ -3,7 +3,11 @@ from django.contrib import messages
 from .forms import RegistroUsuarioForm
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, authenticate
+from django.contrib.auth.decorators import login_required
 
+@login_required
+def miPerfil(request):
+    return render(request, 'miPerfil.html')
 
 def inicio(request):
   return render(request, 'inicio.html', {})
