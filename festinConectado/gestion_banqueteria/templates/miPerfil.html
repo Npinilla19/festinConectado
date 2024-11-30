@@ -1,11 +1,7 @@
-
 {% extends 'base.html' %} {% block content %}
 <div class="container py-5">
   <h1>Bienvenido a tu perfil, {{ user.username }}</h1>
 
   <p>Aquí podrás hacer cotizaciones y ver tus eventos.</p>
-
-  <a href="{% url 'logout' %}">Cerrar sesión</a>
-
 </div>
 {% endblock %}
